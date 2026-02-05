@@ -1,4 +1,4 @@
-import ErrorCode from '@enum/ErrorCode';
+import { ErrorCode } from '../enum/ErrorCode';
 
 /**
  * 通用响应格式

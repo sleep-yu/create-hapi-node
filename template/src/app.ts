@@ -1,7 +1,7 @@
 import { Server } from '@hapi/hapi';
 import * as Inert from '@hapi/inert';
-import { ExampleRoute } from '@routes/example/ExampleRoute';
-import { ExampleService } from '@services/example/ExampleService';
+import { ExampleRoute } from './routes/example/ExampleRoute';
+import { ExampleService } from './services/example/ExampleService';
 
 export class App {
   public server: Server;

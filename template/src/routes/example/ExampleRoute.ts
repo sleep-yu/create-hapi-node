@@ -1,9 +1,9 @@
 import { RouteOptions } from '@hapi/hapi';
 import Joi from 'joi';
-import ErrorCode from '@enum/ErrorCode';
-import { ExampleService } from '@services/example/ExampleService';
-import { getResponses } from '@utils/Utility';
-import { IExampleQuery } from '@interfaces/example/types';
+import { ErrorCode } from '../../enum/ErrorCode';
+import { ExampleService } from '../../services/example/ExampleService';
+import { getResponses } from '../../utils/Utility';
+import { IExampleQuery } from '../../interfaces/example/types';
 
 /**
  * 查询参数校验
@@ -35,7 +35,7 @@ const responses = getResponses([
  * 示例路由
  * 路由层负责：定义路由、参数校验、调用服务层
  */
-export const ExampleRoute: RouteOptions = {
+export const ExampleRoute = {
   method: 'GET' as const,
   path: '/example',
   options: {
@@ -55,7 +55,7 @@ export const ExampleRoute: RouteOptions = {
       },
     },
   },
-  async handler(request) {
+  async handler(request: any) {
     const query = request.query as IExampleQuery;
 
     // 获取服务实例

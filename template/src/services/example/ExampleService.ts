@@ -1,4 +1,4 @@
-import { IExampleResponse } from '@interfaces/example/types';
+import { IExampleResponse } from '../../interfaces/example/types';
 
 /**
  * 示例服务类

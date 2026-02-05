@@ -1,7 +1,13 @@
+// 添加这个类型声明
+declare module 'module-alias' {
+  function addAliases(aliases: Record<string, string>): void;
+}
+
 import moduleAlias from 'module-alias';
 
 // 配置路径别名
-moduleAlias({
+// @ts-ignore
+moduleAlias.addAliases({
   '@routes': __dirname + '/routes',
   '@services': __dirname + '/services',
   '@clients': __dirname + '/clients',
@@ -11,10 +17,9 @@ moduleAlias({
   '@validates': __dirname + '/validates',
 });
 
-import { Server } from '@hapi/hapi';
 import { App } from './app';
 
-const PORT = process.env.PORT || 5000;
+const PORT = Number(process.env.PORT) || 5000;
 
 (async function run() {
   try {
