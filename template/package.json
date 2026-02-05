@@ -1,17 +1,35 @@
 {
   "name": "{{projectName}}",
   "version": "1.0.0",
-  "description": "Hapi + TypeScript 项目",
+  "description": "Hapi + TypeScript 三层架构项目",
   "main": "dist/main.js",
+  "_moduleAliases": {
+    "@routes": "dist/routes",
+    "@services": "dist/services",
+    "@clients": "dist/clients",
+    "@interfaces": "dist/interfaces",
+    "@enum": "dist/enum",
+    "@utils": "dist/utils",
+    "@validates": "dist/validates"
+  },
   "scripts": {
-    "dev": "ts-node src/main.ts",
-    "build": "tsc",
-    "start": "node dist/main.js"
+    "dev": "rm -rf dist && tsc && node dist/main.js",
+    "build": "rm -rf dist && tsc",
+    "start": "node dist/main.js",
+    "test": "jest"
   },
   "dependencies": {
-    "@hapi/hapi": "^21.0.0"
+    "@hapi/hapi": "^21.0.0",
+    "@hapi/inert": "^7.0.0",
+    "joi": "^17.0.0",
+    "module-alias": "^2.2.2",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.0"
   },
   "devDependencies": {
+    "@types/hapi__hapi": "^21.0.0",
+    "@types/joi": "^17.0.0",
+    "@types/lodash": "^4.14.0",
     "@types/node": "^20.0.0",
     "ts-node": "^10.9.0",
     "typescript": "^5.0.0"
