@@ -1,0 +1,46 @@
+{
+  "name": "create-hapi-node",
+  "version": "1.0.0",
+  "description": "快速创建 Hapi + TypeScript 项目脚手架",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-hapi-node": "./bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc && node dist/cli.js",
+    "start": "node dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sleep-yu/create-hapi-node.git"
+  },
+  "keywords": [
+    "hapi",
+    "typescript",
+    "node",
+    "cli",
+    "starter",
+    "generator",
+    "template",
+    "scaffold",
+    "boilerplate"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sleep-yu/create-hapi-node/issues"
+  },
+  "homepage": "https://github.com/sleep-yu/create-hapi-node#readme",
+  "dependencies": {
+    "fs-extra": "^11.3.3",
+    "inquirer": "^13.2.2"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^25.2.0",
+    "typescript": "^5.9.3"
+  }
+}
