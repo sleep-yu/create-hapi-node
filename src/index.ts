@@ -37,7 +37,7 @@ export async function cli(): Promise<void> {
   }
   // 复制模版
   console.log('🚀 正在创建项目...');
-  const templateDir = path.join(__dirname, '../template');
+  const templateDir = path.join(__dirname, '../../template');
   await fs.copy(templateDir, targetDir);
 
   console.log(`✅ 项目 ${answers.projectName} 创建成功!`);
