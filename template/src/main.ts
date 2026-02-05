@@ -1,7 +1,7 @@
 import moduleAlias from 'module-alias';
 
 // 配置路径别名
-moduleAlias.addAliases({
+moduleAlias({
   '@routes': __dirname + '/routes',
   '@services': __dirname + '/services',
   '@clients': __dirname + '/clients',

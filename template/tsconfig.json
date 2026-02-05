@@ -10,7 +10,7 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
       "@routes": ["src/routes"],
       "@services": ["src/services"],

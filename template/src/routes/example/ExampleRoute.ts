@@ -36,7 +36,7 @@ const responses = getResponses([
  * 路由层负责：定义路由、参数校验、调用服务层
  */
 export const ExampleRoute: RouteOptions = {
-  method: 'GET',
+  method: 'GET' as const,
   path: '/example',
   options: {
     id: 'getExample',
