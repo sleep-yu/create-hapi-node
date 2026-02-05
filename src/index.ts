@@ -1,6 +1,12 @@
 import inquirer from "inquirer";
 import path from "path";
 import fs from 'fs-extra';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// ES Module 中获取 __dirname 的方法
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 interface IAnswer {
   projectName: string;
