@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "tsc && node dist/cli.js",
+    "dev": "tsc && node dist/bin/cli.js",
     "start": "node dist/cli.js"
   },
   "repository": {
